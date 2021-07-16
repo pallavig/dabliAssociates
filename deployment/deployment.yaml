@@ -11,10 +11,10 @@ spec:
       app: dabli-associates-app
   template:
     metadata:
-      name: nginx-pod
+      name: dabli-associates-pod
       labels:
         app: dabli-associates-app
     spec:
       containers:
         - name: dabli-associates-container
-          image: dabli_associates
+          image: pgoliwale/dabli-associates:0.1
