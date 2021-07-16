@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dabli-associates-deployment
+  labels:
+    app: dabli-associates-deployment
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: dabli-associates-app
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: dabli-associates-app
+    spec:
+      containers:
+        - name: dabli-associates-container
+          image: dabli_associates
